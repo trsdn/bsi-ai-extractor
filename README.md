@@ -48,9 +48,20 @@ The BSI AI Extractor processes PDF documents containing AI evaluation criteria a
 
 ## Installation
 
+### Quick Setup (Recommended)
+
+Run the automated setup script:
+```bash
+git clone https://github.com/trsdn/bsi-ai-extractor.git
+cd bsi-ai-extractor
+./setup.sh
+```
+
+### Manual Setup
+
 1. Clone this repository:
 ```bash
-git clone https://github.com/username/bsi-ai-extractor.git
+git clone https://github.com/trsdn/bsi-ai-extractor.git
 cd bsi-ai-extractor
 ```
 
@@ -61,6 +72,11 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+   Or install manually:
 ```bash
 pip install PyMuPDF
 ```
@@ -115,6 +131,8 @@ Field statistics:
 ```
 bsi-ai-extractor/
 ├── script.py                    # Main extraction script
+├── setup.sh                     # Automated setup script
+├── requirements.txt             # Python dependencies
 ├── AI-Finance_Test-Criteria.pdf # Input PDF document
 ├── criteria_catalogue.csv       # Generated output file
 ├── README.md                    # This file

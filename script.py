@@ -1,8 +1,21 @@
-import fitz
 import csv
 import re
 import sys
 import os
+
+# Check for required dependencies
+try:
+    import fitz
+except ImportError:
+    print("Error: PyMuPDF library not found.")
+    print("Please install it using one of the following commands:")
+    print("  pip install -r requirements.txt")
+    print("  pip install PyMuPDF")
+    print("\nIf you're using a virtual environment, make sure it's activated first:")
+    print("  python3 -m venv venv")
+    print("  source venv/bin/activate  # On Windows: venv\\Scripts\\activate")
+    print("  pip install -r requirements.txt")
+    sys.exit(1)
 
 # Check if the PDF file exists
 pdf_path = "AI-Finance_Test-Criteria.pdf"
